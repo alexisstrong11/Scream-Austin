@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scream Austin</title>
+</head>
+<body>
+    <div id="player"></div>
+
+    <script>
+      var apiKey = 'AIzaSyD-rKT10mNdWBXj3fyxr9Fv4dMvWKualf8';
+      var videoId = '-Zqap0QzyJs';
+  
+      // Load the YouTube IFrame Player API asynchronously
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+      // Create an <iframe> player once the API code has loaded
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: videoId,
+          playerVars: {
+            'autoplay': 1,     // Autoplay the video
+            'controls': 1,     // Show player controls
+            'rel': 0,          // Do not show related videos
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+  
+      // Execute custom logic once the player is ready
+      function onPlayerReady(event) {
+        console.log('Player is ready.');
+        // You can perform additional operations here if needed
+      }
+  
+      // Execute custom logic when the player state changes
+      function onPlayerStateChange(event) {
+        // You can perform additional operations here if needed
+      }
+    </script>
+    
+</body>
+</html>
