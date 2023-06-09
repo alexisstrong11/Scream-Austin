@@ -4,51 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Scream Austin</title>
 </head>
 <body>
-    <div id="player"></div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script>
-      var apiKey = 'AIzaSyD-rKT10mNdWBXj3fyxr9Fv4dMvWKualf8';
-      var videoId = '-Zqap0QzyJs';
-  
-      // Load the YouTube IFrame Player API asynchronously
-      var tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  
-      // Create an <iframe> player once the API code has loaded
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '360',
-          width: '640',
-          videoId: videoId,
-          playerVars: {
-            'autoplay': 1,     // Autoplay the video
-            'controls': 1,     // Show player controls
-            'rel': 0,          // Do not show related videos
-          },
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-  
-      // Execute custom logic once the player is ready
-      function onPlayerReady(event) {
-        console.log('Player is ready.');
-        // You can perform additional operations here if needed
-      }
-  
-      // Execute custom logic when the player state changes
-      function onPlayerStateChange(event) {
-        // You can perform additional operations here if needed
-      }
-    </script>
+  <section id="home">
+    <div class="hero">
+      <h1>Welcome to Scream Austin!</h1>
+      <p>Discover local Austin, TX artists and venues!</p>
+      <a href="#music" class="btn">Listen Now</a>
+    </div>
+
     
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>Artist Bio</h2>
+      <p>The alternative rock band, Woodward and Parker, are a five piece from Austin, TX. Their latest release, Through a Broken Window, shines a new light on memories of the past. The urban-inspired tracks give listeners an outlet to adapt and understand the external world internally, as time forces change upon seasons and people. Reminiscing the good old days, and recognizing the darkness of the past, these five best friends play loudly for the future.</p>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="music">
+    <div class="container">
+      <h2>My Music</h2>
+      <div class="music-list">
+        <div id="player"></div>
+
+        <script>
+          var apiKey = 'AIzaSyD-rKT10mNdWBXj3fyxr9Fv4dMvWKualf8';
+          var videoId = '-Zqap0QzyJs';
+      
+          // Load the YouTube IFrame Player API asynchronously
+          var tag = document.createElement('script');
+          tag.src = 'https://www.youtube.com/iframe_api';
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+          // Create an <iframe> player once the API code has loaded
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              height: '360',
+              width: '640',
+              videoId: videoId,
+              playerVars: {
+                'click': 1,        // Video plays on click
+                'controls': 1,     // Show player controls
+                'rel': 0,          // Do not show related videos
+              },
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+      
+          // Execute custom logic once the player is ready
+          function onPlayerReady(event) {
+            console.log('Player is ready.');
+            // You can perform additional operations here if needed
+          }
+      
+          // Execute custom logic when the player state changes
+          function onPlayerStateChange(event) {
+            // You can perform additional operations here if needed
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+
+    
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Interested in collaborating or have any questions? Feel free to reach out!</p>
+        <form action="submit_form.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./assets/script.js"></script>
 </body>
 </html>
