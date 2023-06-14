@@ -27,7 +27,7 @@
       <a href="#music" class="btn">Listen Now</a>
     </div>
   </section>
-  <div id =”my-map” style = “width:800px; height:600px;”></div>
+  <div id =”my-map” style =  width:800px; height:600px;></div>
   <script>
     // Created map options
     var mapOptions = {
@@ -36,10 +36,10 @@
     }
     
     // Created a map object
-    var map = new L.map(‘map’, mapOptions);
+    var map = new L.map(map, mapOptions);
     
     // Created a Layer object
-    var layer = new     L.TileLayer(‘http:{s}.tile.openstreetmap.org/{z}/{x}/{y}.png’);
+    var layer = new     L.TileLayer("http:{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
     
     // Added layer to the map
     map.addLayer(layer);
