@@ -44,9 +44,23 @@
         <p></p>
       </div>
     </section>
+
   <section id="music-video">
     <div class="container">
       <h2>Music</h2>
+      <div class="music-list">
+        <div id="player1"></div>
+        <div id="player2"></div>
+        <div id="player3"></div>
+        <div id="player4"></div>
+        <div id="player5"></div>
+        <div id="player6"></div>
+        <div id="player7"></div>
+        <div id="player8"></div>
+        <div id="player9"></div>
+        <div id="player10"></div>
+        <!-- Add more div elements for additional videos -->
+      </div>
       <div class="music-list">
         <div id="player"></div>
         <script>
@@ -59,28 +73,26 @@
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
           var players = [];
+          
           function onYouTubeIframeAPIReady() {
             for (var i = 0; i < videoIds.length; i++) {
-              var playerDiv = document.createElement('div');
-              playerDiv.id = 'player' + (i + 1);
-              document.querySelector('.music-list').appendChild(playerDiv);
-
-              players[i] = new YT.Player(playerDiv.id, {
-                height: '360',
-                width: '640',
-                videoId: videoIds[i],
-                playerVars: {
-                  'autoplay': 0,
-                  'controls': 1,
-                  'rel': 0,
-                },
-                events: {
-                  'onReady': onPlayerReady,
-                  'onStateChange': onPlayerStateChange
-                }
-              });
+              var playerDiv = document.getElementById('player' + (i + 1));
+          players[i] = new YT.Player(playerDiv.id, {
+            height: '360',
+            width: '640',
+            videoId: videoIds[i],
+            playerVars: {
+              'autoplay': 0,
+              'controls': 1,
+              'rel': 0,
+            },
+            events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange
             }
-          }
+          });
+        }
+      }
           function onPlayerReady(event) {
             console.log('Player is ready.');
             // We can perform additional operations here if needed
