@@ -80,7 +80,7 @@
     .container {
       padding: 10px;
     }
-
+    
   @media (max-width: 330px) {
       .container {
         padding: 10px;
