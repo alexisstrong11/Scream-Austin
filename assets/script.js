@@ -42,3 +42,4 @@ function seek() {
 }
 
 seekSlider.addEventListener('input', seek);
+
