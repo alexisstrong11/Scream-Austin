@@ -80,12 +80,11 @@
     .container {
       padding: 10px;
     }
-    
+  }
   @media (max-width: 330px) {
       .container {
         padding: 10px;
       }
-
     }
   
     header h1 {
@@ -100,5 +99,5 @@
     footer {
       font-size: 14px;
     }
-  }
+  
   
