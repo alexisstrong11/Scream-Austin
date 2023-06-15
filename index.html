@@ -35,77 +35,244 @@
           They've been dubbed "Masters of indie folk" by Austin's NPR station, KUTX and their song, "Lion Eyes" was in Spike Lee's, 'BlacKkKlansman.'
           
           Their debut full-length record "Get Together" (produced by James Petralli of White Denim) is out now!</p>
-        <p></p>
       </div>
     </section>
     <section id="about-woodward">
       <div class="container">
         <h2>Woodward and Parker</h2>
         <p>The alternative rock band, Woodward and Parker, are a five piece from Austin, TX. Their latest release, Through a Broken Window, shines a new light on memories of the past. The urban-inspired tracks give listeners an outlet to adapt and understand the external world internally, as time forces change upon seasons and people. Reminiscing the good old days, and recognizing the darkness of the past, these five best friends play loudly for the future.</p>
-        <p></p>
       </div>
     </section>
-
-  <section id="music-video">
-    <div class="container">
-      <h2>Music</h2>
-      <div class="music-list">
-        <div id="player1"></div>
-        <div id="player2"></div>
-        <div id="player3"></div>
-        <div id="player4"></div>
-        <div id="player5"></div>
-        <div id="player6"></div>
-        <div id="player7"></div>
-        <div id="player8"></div>
-        <div id="player9"></div>
-        <div id="player10"></div>
-        <!-- Add more div elements for additional videos -->
-      </div>
-      <div class="music-list">
-        <div id="player"></div>
-        <script>
-          var apiKey = 'AIzaSyD-rKT10mNdWBXj3fyxr9Fv4dMvWKualf8';
-          var videoIds = ['-Zqap0QzyJs', 'R7Y_mbkmN3c', '5rdwr9ThL4I', 'iM9yIreIGEY', 'VD7IB-WHtGs', 'W5oJgvbUlmM', 'LjHNEhqlBNk', 'kWGfOuw9PpY', 'OZzadlZBgN0', 'zY3BvnHIEnI'];
-          
-          var tag = document.createElement('script');
-          tag.src = 'https://www.youtube.com/iframe_api';
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          var players = [];
-          
-          function onYouTubeIframeAPIReady() {
-            for (var i = 0; i < videoIds.length; i++) {
-              var playerDiv = document.getElementById('player' + (i + 1));
-          players[i] = new YT.Player(playerDiv.id, {
-            height: '360',
-            width: '640',
-            videoId: videoIds[i],
-            playerVars: {
-              'autoplay': 0,
-              'controls': 1,
-              'rel': 0,
-            },
-            events: {
-              'onReady': onPlayerReady,
-              'onStateChange': onPlayerStateChange
-            }
-          });
-        }
-      }
-          function onPlayerReady(event) {
-            console.log('Player is ready.');
-            // We can perform additional operations here if needed
-          }
-          function onPlayerStateChange(event) {
-            // We can perform additional operations here if needed
-          }
-        </script>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hot Commotitty</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player1"></div>
+              </div>
+          </section>
+        </div>
       </div>
     </div>
-  </section>
-    
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player2"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player3"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player4"></div>
+              </div>
+          </section>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player5"></div>
+              </div>
+          </section>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player6"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player7"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player8"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player9"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player10"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
     <section>
       <div id="contact" class="container">
 
