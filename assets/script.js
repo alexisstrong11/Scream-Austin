@@ -1,4 +1,4 @@
 
-var comment = localStorage.getItem("comment");
+var comment = localStorage.setItem("comment");
 
 localStorage.getItem("comment");
