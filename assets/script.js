@@ -27,6 +27,13 @@ events: {
     });
   }
 }
+function onPlayerReady(event) {
+  console.log('Player is ready.');
+// We can perform additional operations here if needed
+}
+function onPlayerStateChange(event) {
+// We can perform additional operations here if needed
+}
 
 let mapOptions = {
   center:[30.2653, -97.7512],
