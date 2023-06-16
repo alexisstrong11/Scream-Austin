@@ -25,7 +25,7 @@
   }
   
   /* Navigation styles */
-  .homenav {
+  #homeNav {
     background-color: #444;
     padding: 10px;
     text-align: center;
@@ -37,17 +37,16 @@
 
   }
 
-  
-  nav ul {
+  #homeNav ul {
     list-style: none;
   }
   
-  nav ul li {
+  #homeNav ul li {
     display: inline-block;
     margin-right: 10px;
   }
   
-  nav ul li a {
+  #homeNav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
@@ -66,13 +65,35 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
-  
+  .hero {
+    align-items: center;
+  }
   #submitbutton {
    display: flex; 
   }
 
   .level {
     display: flex;
+  }
+
+  #dropdownContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+  #dropdownContainer div{
+    padding: .2%;
+  }
+
+#commentSubmission{
+  display: flex;
+}
+
+.textarea{
+  width: 500px
+}
+  #commentSubmission div{
+    padding: 1% 5% 1% 0%;
   }
   /* Footer styles */
   footer {
