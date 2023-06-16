@@ -36,15 +36,15 @@ function onPlayerStateChange(event) {
 }
 
 
-const field = document.querySelector('textarea');
+const field = document.querySelector("#comment");
 const backUp = field.getAttribute('placeholder')
 const btn = document.querySelector('button is-info');
 // const clear = document.getElementById('clear')
-const submit = document.querySelector('#submitbutton')
+const submit = document.querySelector('#commentSubmission')
+const comments = document.querySelector("#comments")
+let comments_arr = [];
 
-const comments_arr = [];
-
-const display_comments = () => {
+ const display_comments = (comments_arr) => {
   let list = '<ul>';
    comments_arr.forEach(comment => {
     list += `<li>${comment}</li>`;
@@ -53,20 +53,25 @@ const display_comments = () => {
   comments.innerHTML = list;
 }
 
-clear.onclick = function(event){
-  event.preventDefault();
+ // clear.onclick = function(event){
+ // event.preventDefault();
   
-   comments_arr.length = 0;
+  // comments_arr.length = 0;
   
-  display_comments();
-}
+ // display_comments();
+//}
 
-submit.onclick = function(event){
+submit.addEventListener("click",function(event){
     event.preventDefault();
+    console.log(event)
+    const comments_arr = (localStorage.getItem("comments_arr"))? JSON.parse(localStorage.getItem("comments_arr")):[]
     const content = field.value;
+    console.log("test",content)
     if(content.length > 0){ 
       comments_arr.push(content);
-      display_comments(); 
+      localStorage.setItem("comments_arr", JSON.stringify(comments_arr))
+      display_comments(comments_arr); 
       field.value = '';
     }
 }
+)
