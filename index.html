@@ -304,15 +304,8 @@
     </section>
     
   </section>
-  <div id =”my-map” style =  width:800px; height:600px;></div>
-
-  <div>
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-97.73064672946931%2C30.207484607075834%2C-97.72964090108873%2C30.20961945215503&amp;layer=mapnik&amp;marker=30.208552035404438%2C-97.730143815279" style="border: 1px solid black"></iframe><br/>
-    <small><a href="https://www.openstreetmap.org/?mlat=30.20855&amp;mlon=-97.73014#map=19/30.20855/-97.73014">View Larger Map</a></small>
-  </div>
-
-
-    <section>
+  <div id="map"></div>
+  <section>
       <article class="media">
         <figure class="media-left">
           <p class="image is-64x64">
@@ -347,23 +340,8 @@
       </article>
     </section>
 
-    <script>
-      // Created map options
-      var mapOptions = {
-      center: [17.385044, 78.486671],
-      zoom: 10
-      }
-      
-      // Created a map object
-      var map = new L.map(map, mapOptions);
-      
-      // Created a Layer object
-      var layer = new     L.TileLayer("http:{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
-      
-      // Added layer to the map
-      map.addLayer(layer);
-      </script>
     <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="./assets/script.js"></script>
+    
 </body>
 </html>
