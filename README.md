@@ -14,7 +14,7 @@ Scream Austin is a website that showcases local Austin, Texas artists and venues
 - [How to Contribute](#how-to-contribute)
 - - - -
 ## **Usage**
-To access and use my project, click the "Scream Austin" link shown in the [Website Preview](#website-preview)<a name="website_preview"></a> section below. 
+To access and use my project, click the "Scream Austin" link shown in the [Website Preview](#website-preview)<a name="website_preview"></a> section below. Use the navigation bar at the top to direct you to each page section. Hover over each song name to display and play its YouTube video. Then, towards the bottom of the page, submit your feedback or questions in the comment section to contact to the band. 
 - - - -
 ## **Website Preview**
 [Scream Austin](https://alexisstrong11.github.io/Scream-Austin/) ![Preview of website](./images/Final%20HP.png)
