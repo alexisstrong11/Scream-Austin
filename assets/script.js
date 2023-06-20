@@ -35,43 +35,66 @@ function onPlayerStateChange(event) {
 // We can perform additional operations here if needed
 }
 
+let mapOptions = {
+  center:[30.2653, -97.7512],
+  zoom:12
+}
 
-const field = document.querySelector("#comment");
-const backUp = field.getAttribute('placeholder')
-const btn = document.querySelector('button is-info');
-// const clear = document.getElementById('clear')
-const submit = document.querySelector('#commentSubmission')
-const comments = document.querySelector("#comments")
-let comments_arr = [];
+let map = new L.map('map' , mapOptions);
 
- const display_comments = (comments_arr) => {
-  let list = '<ul>';
-   comments_arr.forEach(comment => {
-    list += `<li>${comment}</li>`;
+let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+map.addLayer(layer);
+
+
+let locations = [
+  {
+  "id": 1,
+  "lat": 30.20855,
+  "long": -97.72972,
+  "src":'images/Meanwhile.png',
+  "title":"Meanwhile Brewing",
+  "url":"https://www.meanwhilebeer.com/"
+  },
+  {
+  "id": 2,
+  "lat": 30.2700576,
+  "long": -97.7360877,
+  "src":'images/Mowhawk.png',
+  "title":"Mohawk",
+  "url":"https://mohawkaustin.com/"
+  },
+  {
+    "id": 3,
+    "lat": 30.26606,
+    "long": -97.74039,
+    "src":'images/Antones.jpeg',
+    "title":"Antones",
+    "url":"https://antonesnightclub.com/"
+  },
+  {
+    "id": 4,
+    "lat": 30.29537,
+    "long": -97.74203,
+    "src":'images/Spiderhouse.png',
+    "title":"Spiderhouse Ballroom",
+    "url":"https://www.ballroomtx.com/"
+  }
+]
+
+
+let popupOption = {
+  "closeButton":false
+}
+
+locations.forEach(element => {
+  new L.Marker([element.lat,element.long]).addTo(map)
+  .on("mouseover",event =>{
+      event.target.bindPopup('<div class="card"><img src="'+element.src+'" width="80" height="80" alt="'+element.title+'">   <h3>'+element.title+'</h3></div>',popupOption).openPopup();
   })
-  list += '</ul>';
-  comments.innerHTML = list;
-}
-
- // clear.onclick = function(event){
- // event.preventDefault();
-  
-  // comments_arr.length = 0;
-  
- // display_comments();
-//}
-
-submit.addEventListener("click",function(event){
-    event.preventDefault();
-    console.log(event)
-    const comments_arr = (localStorage.getItem("comments_arr"))? JSON.parse(localStorage.getItem("comments_arr")):[]
-    const content = field.value;
-    console.log("test",content)
-    if(content.length > 0){ 
-      comments_arr.push(content);
-      localStorage.setItem("comments_arr", JSON.stringify(comments_arr))
-      display_comments(comments_arr); 
-      field.value = '';
-    }
-}
-)
+  .on("mouseout", event => {
+      event.target.closePopup();
+  })
+  .on("click" , () => {
+      window.open(element.url);
+  })
+});
