@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav id="homeNav">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -27,116 +27,321 @@
       <p>Discover local Austin, TX artists and venues!</p>
       <a href="#music" class="btn">Listen Now</a>
     </div>
-  </section>
-  <div id =”my-map” style =  width:800px; height:600px;></div>
-  <script>
-    // Created map options
-    var mapOptions = {
-    center: [17.385044, 78.486671],
-    zoom: 10
-    }
-    
-    // Created a map object
-    var map = new L.map(map, mapOptions);
-    
-    // Created a Layer object
-    var layer = new     L.TileLayer("http:{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
-    
-    // Added layer to the map
-    map.addLayer(layer);
-    </script>
-  <div>
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-97.73064672946931%2C30.207484607075834%2C-97.72964090108873%2C30.20961945215503&amp;layer=mapnik&amp;marker=30.208552035404438%2C-97.730143815279" style="border: 1px solid black"></iframe><br/>
-    <small><a href="https://www.openstreetmap.org/?mlat=30.20855&amp;mlon=-97.73014#map=19/30.20855/-97.73014">View Larger Map</a></small>
-  </div>
-  <section id="about-woodward">
-    <div class="container">
-      <h2>Woodward and Parker</h2>
-      <p>The alternative rock band, Woodward and Parker, are a five piece from Austin, TX. Their latest release, Through a Broken Window, shines a new light on memories of the past. The urban-inspired tracks give listeners an outlet to adapt and understand the external world internally, as time forces change upon seasons and people. Reminiscing the good old days, and recognizing the darkness of the past, these five best friends play loudly for the future.</p>
-      <p></p>
-    </div>
-  </section>
+    <section id="about-beth-james">
+      <div class="container">
+        <h2>Beth // James</h2>
+        <p>Beth // James is a married indie-Americana duo from Austin, Texas made up of award winning singer-songwriters, Mikaela & Jordan Burchill.
 
-  <section id="music-woodward">
-    <div class="container">
-      <h2>Music</h2>
-      <div class="music-list">
-        <div id="player"></div>
-        <script>
-          var apiKey = 'AIzaSyD-rKT10mNdWBXj3fyxr9Fv4dMvWKualf8';
-          var videoIds = ['-Zqap0QzyJs', 'R7Y_mbkmN3c', '5rdwr9ThL4I', 'iM9yIreIGEY', 'VD7IB-WHtGs', 'W5oJgvbUlmM', 'LjHNEhqlBNk', 'kWGfOuw9PpY', 'OZzadlZBgN0', 'zY3BvnHIEnI'];
+          They've been dubbed "Masters of indie folk" by Austin's NPR station, KUTX and their song, "Lion Eyes" was in Spike Lee's, 'BlacKkKlansman.'
           
-          var tag = document.createElement('script');
-          tag.src = 'https://www.youtube.com/iframe_api';
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          var players = [];
-          function onYouTubeIframeAPIReady() {
-            for (var i = 0; i < videoIds.length; i++) {
-              var playerDiv = document.createElement('div');
-              playerDiv.id = 'player' + (i + 1);
-              document.querySelector('.music-list').appendChild(playerDiv);
-
-              players[i] = new YT.Player(playerDiv.id, {
-                height: '360',
-                width: '640',
-                videoId: videoIds[i],
-                playerVars: {
-                  'autoplay': 0,
-                  'controls': 1,
-                  'rel': 0,
-                },
-                events: {
-                  'onReady': onPlayerReady,
-                  'onStateChange': onPlayerStateChange
-                }
-              });
-            }
-          }
-          function onPlayerReady(event) {
-            console.log('Player is ready.');
-            // We can perform additional operations here if needed
-          }
-          function onPlayerStateChange(event) {
-            // We can perform additional operations here if needed
-          }
-        </script>
+          Their debut full-length record "Get Together" (produced by James Petralli of White Denim) is out now!</p>
+      </div>
+    </section>
+    <section id="about-woodward">
+      <div class="container">
+        <h2>Woodward and Parker</h2>
+        <p>The alternative rock band, Woodward and Parker, are a five piece from Austin, TX. Their latest release, Through a Broken Window, shines a new light on memories of the past. The urban-inspired tracks give listeners an outlet to adapt and understand the external world internally, as time forces change upon seasons and people. Reminiscing the good old days, and recognizing the darkness of the past, these five best friends play loudly for the future.</p>
+      </div>
+    </section>
+    <section id="dropdownContainer">
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hot Commodity</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player1"></div>
+              </div>
+          </section>
+        </div>
       </div>
     </div>
-  </section>
-    
-    <section id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Varsity Marquee</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player2"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Live at Spiderhouse Ballroom</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player3"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>What I Want</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player4"></div>
+              </div>
+          </section>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>This Songs About Vampires</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player5"></div>
+              </div>
+          </section>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Shake It Out</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player6"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>The Sun</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player7"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>How Sweet It Is</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player8"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Voicemails</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player9"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Dont Let Me Down</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <section id="music-video">
+            <div class="container">
+              <h2>Music Videos</h2>
+              <div class="music-list">
+                <div id="player10"></div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section>
+      <div id="contact" class="container">
+
+        <h2>Comment section</h2>
         <p>Interested in collaborating or have any questions? Feel free to reach out!</p>
-        <form action="submit_form.php" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
+        <div id="commentSubmission">
+          <div class="media-content">
+            <div class="field">
+              <p class="control">
+                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+              </p>
+            </div>
+            <div id="submitbutton">
+            <nav class="level">
+              <div class="level-left">
+                <div class="level-item">
+                  <button class="button is-info">Submit</button>
+                </div>
+              </div>
+            </nav>
+          </div>
+          </div>
+        </div>
+        </div>
         </form>
       </div>
     </section>
-
-    <section id="about-woodward">
-      <div class="container">
-        <h2>Beth // James</h2>
-        <p>The alternative rock band, Woodward and Parker, are a five piece from Austin, TX. Their latest release, Through a Broken Window, shines a new light on memories of the past. The urban-inspired tracks give listeners an outlet to adapt and understand the external world internally, as time forces change upon seasons and people. Reminiscing the good old days, and recognizing the darkness of the past, these five best friends play loudly for the future.</p>
-        <p></p>
-      </div>
+    
+  </section>
+  <div id="map"></div>
+  <section>
+      <article class="media">
+        <figure class="media-left">
+          <p class="image is-64x64">
+            <img src="https://bulma.io/images/placeholders/128x128.png">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small"><i class="fas fa-reply"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fas fa-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+        <div class="media-right">
+          <button class="delete"></button>
+        </div>
+      </article>
     </section>
+
     <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="./assets/script.js"></script>
-    <section id="music-woodward">
-      <div class="container">
-        <h2>Music</h2>
-        <div class="music-list">
-          <div id="player"></div>
-        </div>
-      </div>
-      
-    </section>
     
 </body>
 </html>
