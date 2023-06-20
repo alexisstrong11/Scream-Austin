@@ -8,16 +8,16 @@
   /* Body styles */
   body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #f3f2e0;
+    color: #801515;
   }
   
   /* Header styles */
   header {
-    background-color: #333;
+    background-color: #801515;
     padding: 20px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
   }
   
   header h1 {
@@ -39,6 +39,7 @@
 
   #homeNav ul {
     list-style: none;
+    background-color: #ffffff;
   }
   
   #homeNav ul li {
@@ -47,9 +48,9 @@
   }
   
   #homeNav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #000000;
     padding: 5px 10px;
+    text-decoration: underline;
   }
   
   /* Main content styles */
