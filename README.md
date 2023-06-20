@@ -17,7 +17,7 @@ Scream Austin is a website that showcases local Austin, Texas artists and venues
 To access and use my project, click the "Scream Austin" link shown in the [Website Preview](#website-preview)<a name="website_preview"></a> section below. 
 - - - -
 ## **Website Preview**
-[Scream Austin](https://alexisstrong11.github.io/Scream-Austin/) ![Preview of website](./assets/images/Scream%20Austin%20HP.png)
+[Scream Austin](https://alexisstrong11.github.io/Scream-Austin/) ![Preview of website](./images/Final%20HP.png)
 
 - - - - 
 ## **Credits**
