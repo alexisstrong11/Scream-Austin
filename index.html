@@ -277,19 +277,35 @@
 
         <h2>Comment Section</h2>
         <p>Interested in collaborating or have any questions? Feel free to reach out!</p>
-        <div id="commentSubmission">
+        <div>
+       <!-- <div class="media">
+          <figure class="media-left">
+            <p class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+          </figure> -->
           <div class="media-content">
             <div class="field">
               <p class="control">
-                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+                <!-- <textarea class="textarea" placeholder="Add a comment..."></textarea> -->
+               
               </p>
             </div>
-            <div id="submitbutton">
-            <nav class="level">
+            </div>
+           <div id="submitbutton">
+             <nav class="level"> 
               <div class="level-left">
-                <div class="level-item">
-                  <button class="button is-info">Submit</button>
-                </div>
+                <form class="level-item">
+                  <input id="comment" value="" type="text" class="textarea" placeholder="Add a comment..."></input>
+                  <button id="commentSubmission" class="button is-info">Submit</button>
+                </form>
+              </div> 
+
+
+              <div id="comments">
+                
+                
+              </div> 
               </div>
             </nav>
           </div>

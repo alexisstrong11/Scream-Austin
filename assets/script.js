@@ -98,3 +98,34 @@ locations.forEach(element => {
       window.open(element.url);
   })
 });
+
+const field = document.querySelector("#comment");
+const backUp = field.getAttribute('placeholder')
+const btn = document.querySelector('button is-info');
+const submit = document.querySelector('#commentSubmission')
+const comments = document.querySelector("#comments")
+let comments_arr = [];
+
+ const display_comments = (comments_arr) => {
+  let list = '<ul>';
+   comments_arr.forEach(comment => {
+    list += `<li>${comment}</li>`;
+  })
+  list += '</ul>';
+  comments.innerHTML = list;
+}
+
+submit.addEventListener("click",function(event){
+    event.preventDefault();
+    console.log(event)
+    const comments_arr = (localStorage.getItem("comments_arr"))? JSON.parse(localStorage.getItem("comments_arr")):[]
+    const content = field.value;
+    console.log("test",content)
+    if(content.length > 0){ 
+      comments_arr.push(content);
+      localStorage.setItem("comments_arr", JSON.stringify(comments_arr))
+      display_comments(comments_arr); 
+      field.value = '';
+    }
+}
+)
