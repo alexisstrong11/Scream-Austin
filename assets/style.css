@@ -56,13 +56,21 @@
   #bethjamesphoto{
     width: 20%;
     height: 250px;
+    padding-right: 2%;
   }
 
   #woodwardandparkerphoto{
     width: 20%;
     height: 250px;
+    padding-right: 2%;
   }
-  
+  #bethjamesbio{
+    display: flex;
+  }
+
+  #woodwardandparkerbio{
+    display: flex;
+  }
   /* Main content styles */
   .container {
     max-width: 960px;
